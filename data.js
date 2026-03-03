@@ -92,7 +92,7 @@ export const RESOURCES = [
   {
     id: "perplexity",
     name: "Perplexity",
-    desc: "Buscador conversacional que responde con fuentes y citas.",
+    desc: "Buscador IA conversacional que responde con fuentes y citas.",
     category: "Inteligencia Artificial",
     subcategory: "",
     official: "https://www.perplexity.ai",
@@ -147,16 +147,6 @@ export const RESOURCES = [
     download: "",
     tags: ["gratis", "open-source", "iconos", "google"]
   },
-  {
-    id: "formia",
-    name: "Formia",
-    desc: "Convierte tus SVG en logos 3D de forma sencilla y rápida.",
-    category: "Diseño Gráfico",
-    subcategory: "Tipografía & Iconos",
-    official: "https://formia.app",
-    download: "",
-    tags: ["gratis", "3d", "logos", "svg"]
-  },
 
   // ── Recursos Visuales ──
   {
@@ -195,7 +185,7 @@ export const RESOURCES = [
     desc: "Recurso para separar fondos de imágenes, compartido en X.",
     category: "Diseño Gráfico",
     subcategory: "Recursos Visuales",
-    official: "https://x.com/MCShaders",
+    official: "https://x.com/i/status/1946391542094074128",
     download: "",
     tags: ["gratis", "fondos", "imágenes"]
   },
@@ -217,7 +207,7 @@ export const RESOURCES = [
     desc: "Guías y recursos sobre GenP para productos Adobe (uso bajo tu responsabilidad).",
     category: "Diseño Gráfico",
     subcategory: "Adobe Creative Cloud",
-    official: "https://www.reddit.com/r/GenP/wiki/",
+    official: "https://wiki.dbzer0.com/genp-guides/",
     download: "",
     tags: ["gratis", "guías", "adobe", "genp"]
   },
@@ -408,12 +398,12 @@ export const RESOURCES = [
   {
     id: "introhd",
     name: "IntroHD",
-    desc: "Plantillas y recursos para crear intros profesionales y animaciones.",
+    desc: "Plantillas y recursos (Crackeados) para crear intros profesionales y animaciones.",
     category: "Producción de Video",
     subcategory: "Recursos",
     official: "https://introhd.net",
     download: "",
-    tags: ["gratis", "intros", "plantillas", "animaciones"]
+    tags: ["gratis", "premiere", "aftereffects", "plantillas"]
   },
   {
     id: "transitional-hooks",
@@ -444,16 +434,6 @@ export const RESOURCES = [
     official: "https://www.youtube.com",
     download: "",
     tags: ["gratis", "transiciones", "premiere pro", "tutorial"]
-  },
-  {
-    id: "transiciones-premium-navvy",
-    name: "Transiciones Premium Navvy",
-    desc: "Tienda con packs de transiciones para editores de video.",
-    category: "Producción de Video",
-    subcategory: "Recursos",
-    official: "https://navvy.store",
-    download: "",
-    tags: ["premium", "transiciones", "packs"]
   },
   {
     id: "tutorial-subtitulos-premiere",
@@ -858,7 +838,7 @@ export const RESOURCES = [
   {
     id: "pvprp",
     name: "PvPRP",
-    desc: "Resource pack enfocado en PvP con texturas optimizadas.",
+    desc: "Web de Resource packs enfocados en PvP 1.8.",
     category: "Minecraft",
     subcategory: "Personalización",
     official: "https://pvprp.com",
@@ -1074,3 +1054,4 @@ export const RESOURCES = [
     tags: ["plantilla", "storytelling", "narrativa", "estructura", "youtube"]
   },
 ];
+
