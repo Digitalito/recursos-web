@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO & Metadata -->
+    <title>Recursos Web by TutoDigital</title>
+    <meta name="description" content="La mejor colección de herramientas digitales para creadores: Recursos, Diseño, Video, Minecraft y más. Creado por TutoDigital para elevar tu contenido al siguiente nivel." />
+    <meta name="keywords" content="TutoDigital, Digital Galaxy, recursos creadores, herramientas IA, packs minecraft, diseño gráfico, edición video" />
+    <meta name="author" content="TutoDigital" />
+    <meta name="theme-color" content="#0b0f14" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Recursos Web | The Digital Galaxy" />
+    <meta property="og:description" content="Explora más de 150 herramientas y recursos curados para creadores de contenido." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/yorsh-code/recursos-web/main/assets/preview.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Layer -->
+    <div class="bg-layer" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <h1 class="hero-title">Recursos Web</h1>
+        <p class="hero-subtitle">
+          Colección de herramientas y recursos para creadores.
+          <span class="hero-categories">Recursos • Diseño • Video • Minecraft • Streaming y más</span>
+        </p>
+      </section>
+
+      <!-- Search & Controls -->
+      <div class="controls glass-panel" id="controls">
+        <div class="search-wrapper">
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" stroke-linecap="round" />
+          </svg>
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar recursos..."
+            aria-label="Buscar recursos por nombre, descripción o etiquetas"
+            autocomplete="off"
+          />
+        </div>
+        <div class="result-count" id="result-count" aria-live="polite"></div>
+      </div>
+
+      <!-- Category Tabs -->
+      <nav
+        class="category-tabs"
+        id="category-tabs"
+        aria-label="Filtrar por categoría"
+      ></nav>
+
+      <!-- Subcategory Chips -->
+      <nav
+        class="subcategory-chips"
+        id="subcategory-chips"
+        aria-label="Filtrar por subcategoría"
+      ></nav>
+
+      <!-- Resource Grid -->
+      <section
+        class="resource-grid"
+        id="resource-grid"
+        aria-label="Lista de recursos"
+      ></section>
+
+      <!-- No Results -->
+      <div class="no-results" id="no-results" role="status"></div>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal-content glass-panel"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>
+        <strong>Recursos Web</strong> &copy; 2025 — Hecho con
+        <span style="color: var(--accent)">&#9829;</span> por
+        <strong>TutoDigital</strong>
+      </p>
+    </footer>
+
+    <!-- App Entry Point -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
