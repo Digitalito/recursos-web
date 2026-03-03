@@ -17,90 +17,6 @@
 export const RESOURCES = [
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // 🧠 INTELIGENCIA ARTIFICIAL
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  {
-    id: "whimsical",
-    name: "Whimsical",
-    desc: "Crea diagramas, mapas mentales y flujos de trabajo con ayuda de inteligencia artificial.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://whimsical.com",
-    download: "",
-    tags: ["gratis", "premium", "diagramas", "mapas mentales", "productividad"]
-  },
-  {
-    id: "lm-studio",
-    name: "LM Studio",
-    desc: "Ejecuta modelos de lenguaje localmente en tu ordenador, sin conexión.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://lmstudio.ai",
-    download: "https://lmstudio.ai",
-    tags: ["gratis", "local", "modelos", "offline"]
-  },
-  {
-    id: "chatgpt",
-    name: "ChatGPT",
-    desc: "Asistente conversacional de OpenAI, ideal para generar texto, ideas y resolver dudas.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://chat.openai.com",
-    download: "",
-    tags: ["gratis", "premium", "chatbot", "texto", "openai"]
-  },
-  {
-    id: "deepseek",
-    name: "DeepSeek",
-    desc: "Modelo de lenguaje gratuito con capacidades de razonamiento y búsqueda en internet.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://www.deepseek.com",
-    download: "",
-    tags: ["gratis", "razonamiento", "búsqueda", "open-source"]
-  },
-  {
-    id: "claude",
-    name: "Claude",
-    desc: "Asistente de IA de Anthropic, enfocado en conversaciones seguras y útiles.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://claude.ai",
-    download: "",
-    tags: ["gratis", "premium", "chatbot", "anthropic"]
-  },
-  {
-    id: "grok",
-    name: "Grok",
-    desc: "IA integrada en X (antes Twitter) con acceso a información en tiempo real.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://grok.x.ai",
-    download: "",
-    tags: ["gratis", "premium", "tiempo real", "x", "twitter"]
-  },
-  {
-    id: "gemini",
-    name: "Gemini",
-    desc: "Modelo multimodal de Google, capaz de entender texto, imágenes y más.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://gemini.google.com",
-    download: "",
-    tags: ["gratis", "multimodal", "google"]
-  },
-  {
-    id: "perplexity",
-    name: "Perplexity",
-    desc: "Buscador IA conversacional que responde con fuentes y citas.",
-    category: "Inteligencia Artificial",
-    subcategory: "",
-    official: "https://www.perplexity.ai",
-    download: "",
-    tags: ["gratis", "premium", "búsqueda", "fuentes"]
-  },
-
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 🎨 DISEÑO GRÁFICO
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -138,6 +54,16 @@ export const RESOURCES = [
     tags: ["gratis", "fuentes", "tipografía"]
   },
   {
+    id: "formia",
+    name: "Formia",
+    desc: "Convierte logos SVG en modelos 3D interactivos.",
+    category: "Diseño Gráfico",
+    subcategory: "Tipografía & Iconos",
+    official: "https://www.formia.so/",
+    download: "",
+    tags: ["gratis", "3d", "logos", "svg", "interactivo"]
+  },
+  {
     id: "google-fonts-icons",
     name: "Google Fonts Icons",
     desc: "Biblioteca de iconos open source de Google, listos para usar en diseños.",
@@ -150,22 +76,12 @@ export const RESOURCES = [
 
   // ── Recursos Visuales ──
   {
-    id: "moewalls",
-    name: "MoeWalls",
-    desc: "Wallpapers animados y estáticos de anime y videojuegos.",
-    category: "Diseño Gráfico",
-    subcategory: "Recursos Visuales",
-    official: "https://moewalls.com",
-    download: "",
-    tags: ["gratis", "wallpapers", "anime", "videojuegos"]
-  },
-  {
     id: "creavite",
     name: "Creavite",
     desc: "Generador automático de banners, iconos y animaciones para redes sociales.",
     category: "Diseño Gráfico",
     subcategory: "Recursos Visuales",
-    official: "https://creavite.co",
+    official: "https://auto.creavite.co/",
     download: "",
     tags: ["gratis", "banners", "redes sociales", "animaciones"]
   },
@@ -175,7 +91,7 @@ export const RESOURCES = [
     desc: "Herramienta online para ampliar imágenes sin perder calidad (upscaling).",
     category: "Diseño Gráfico",
     subcategory: "Recursos Visuales",
-    official: "https://www.img2go.com",
+    official: "https://www.img2go.com/es/aumentar-imagen",
     download: "",
     tags: ["gratis", "upscaling", "imágenes", "calidad"]
   },
@@ -185,9 +101,19 @@ export const RESOURCES = [
     desc: "Recurso para separar fondos de imágenes, compartido en X.",
     category: "Diseño Gráfico",
     subcategory: "Recursos Visuales",
-    official: "https://x.com/i/status/1946391542094074128",
+    official: "https://x.com/Seltop7/status/1946391683563659424?t=mf1HqoYQy8vHUEaXorXPWg&s=19",
     download: "",
     tags: ["gratis", "fondos", "imágenes"]
+  },
+  {
+    id: "moewalls",
+    name: "MoeWalls",
+    desc: "Wallpapers animados y estáticos de anime y videojuegos.",
+    category: "Diseño Gráfico",
+    subcategory: "Recursos Visuales",
+    official: "https://moewalls.com",
+    download: "",
+    tags: ["gratis", "wallpapers", "anime", "videojuegos"]
   },
 
   // ── Adobe Creative Cloud ──
@@ -240,16 +166,6 @@ export const RESOURCES = [
     tags: ["gratis", "emojis", "servidores"]
   },
   {
-    id: "emoji-gg",
-    name: "Emoji.gg",
-    desc: "Descarga y comparte emojis personalizados para Discord.",
-    category: "Discord",
-    subcategory: "Emojis",
-    official: "https://emoji.gg",
-    download: "",
-    tags: ["gratis", "emojis", "personalización"]
-  },
-  {
     id: "discords-emoji-list",
     name: "Discords Emoji List",
     desc: "Listado de emojis organizados por categorías.",
@@ -258,6 +174,16 @@ export const RESOURCES = [
     official: "https://discords.com/emoji-list",
     download: "",
     tags: ["gratis", "emojis", "lista"]
+  },
+  {
+    id: "emoji-gg",
+    name: "Emoji.gg",
+    desc: "Descarga y comparte emojis personalizados para Discord.",
+    category: "Discord",
+    subcategory: "Emojis",
+    official: "https://emoji.gg",
+    download: "",
+    tags: ["gratis", "emojis", "personalización"]
   },
   {
     id: "emojiterra",
@@ -277,7 +203,7 @@ export const RESOURCES = [
     desc: "Iconos gratuitos para servidores de Discord.",
     category: "Discord",
     subcategory: "Iconos",
-    official: "https://discotools.xyz/icons",
+    official: "https://discordicon.com/es/",
     download: "",
     tags: ["gratis", "iconos", "servidores"]
   },
@@ -299,7 +225,7 @@ export const RESOURCES = [
     desc: "Cambia el icono de tu servidor por el de los inocentes (efímero).",
     category: "Discord",
     subcategory: "Herramientas",
-    official: "https://nese.team",
+    official: "https://tools.nese.dev/discord-april-fools",
     download: "",
     tags: ["gratis", "diversión", "iconos"]
   },
@@ -307,16 +233,6 @@ export const RESOURCES = [
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 🖼 EDICIÓN DE IMÁGENES
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  {
-    id: "photopea",
-    name: "Photopea",
-    desc: "Editor de imágenes online gratuito, similar a Photoshop, compatible con PSD.",
-    category: "Edición de Imágenes",
-    subcategory: "",
-    official: "https://www.photopea.com",
-    download: "",
-    tags: ["gratis", "editor", "psd", "online"]
-  },
   {
     id: "paint-net",
     name: "paint.net",
@@ -326,6 +242,16 @@ export const RESOURCES = [
     official: "https://www.getpaint.net",
     download: "https://www.getpaint.net/download.html",
     tags: ["gratis", "editor", "windows", "capas"]
+  },
+  {
+    id: "photopea",
+    name: "Photopea",
+    desc: "Editor de imágenes online gratuito, similar a Photoshop, compatible con PSD.",
+    category: "Edición de Imágenes",
+    subcategory: "",
+    official: "https://www.photopea.com",
+    download: "",
+    tags: ["gratis", "editor", "psd", "online"]
   },
   {
     id: "picsart",
@@ -354,16 +280,6 @@ export const RESOURCES = [
     tags: ["gratis", "open-source", "3d", "animación"]
   },
   {
-    id: "misterhorse",
-    name: "MisterHorse",
-    desc: "Plugins y plantillas para After Effects y animación.",
-    category: "Producción de Video",
-    subcategory: "Software",
-    official: "https://misterhorse.com",
-    download: "",
-    tags: ["gratis", "premium", "after effects", "plugins"]
-  },
-  {
     id: "capcut",
     name: "CapCut",
     desc: "Editor de video gratuito con herramientas intuitivas y efectos virales.",
@@ -382,6 +298,16 @@ export const RESOURCES = [
     official: "https://www.blackmagicdesign.com/products/davinciresolve",
     download: "https://www.blackmagicdesign.com/products/davinciresolve",
     tags: ["gratis", "premium", "profesional", "color"]
+  },
+  {
+    id: "misterhorse",
+    name: "MisterHorse",
+    desc: "Plugins y plantillas para After Effects y animación.",
+    category: "Producción de Video",
+    subcategory: "Software",
+    official: "https://misterhorse.com",
+    download: "",
+    tags: ["gratis", "premium", "after effects", "plugins"]
   },
   {
     id: "paper-animator",
@@ -406,16 +332,6 @@ export const RESOURCES = [
     tags: ["gratis", "premiere", "aftereffects", "plantillas"]
   },
   {
-    id: "transitional-hooks",
-    name: "Transitional Hooks",
-    desc: "Colección de transiciones gratuitas para video.",
-    category: "Producción de Video",
-    subcategory: "Recursos",
-    official: "https://transitionalhooks.com",
-    download: "",
-    tags: ["gratis", "transiciones", "video"]
-  },
-  {
     id: "jitter-templates",
     name: "Jitter Templates",
     desc: "Plantillas animadas para After Effects y motion graphics.",
@@ -431,9 +347,29 @@ export const RESOURCES = [
     desc: "Más de 60 transiciones gratuitas para Premiere Pro (video tutorial).",
     category: "Producción de Video",
     subcategory: "Recursos",
-    official: "https://www.youtube.com",
+    official: "https://youtu.be/L-D_1fB6eFk",
     download: "",
     tags: ["gratis", "transiciones", "premiere pro", "tutorial"]
+  },
+  {
+    id: "transiciones-premium-navvy",
+    name: "Transiciones Premium",
+    desc: "Packs de transiciones y efectos para Premiere y After Effects.",
+    category: "Producción de Video",
+    subcategory: "Recursos",
+    official: "https://ko-fi.com/navvy_/shop",
+    download: "",
+    tags: ["premium", "transiciones", "after effects", "premiere pro", "navvy"]
+  },
+  {
+    id: "transitional-hooks",
+    name: "Transitional Hooks",
+    desc: "Colección de transiciones gratuitas para video.",
+    category: "Producción de Video",
+    subcategory: "Recursos",
+    official: "https://transitionalhooks.com",
+    download: "",
+    tags: ["gratis", "transiciones", "video"]
   },
   {
     id: "tutorial-subtitulos-premiere",
@@ -441,31 +377,31 @@ export const RESOURCES = [
     desc: "Aprende a hacer subtítulos animados en Premiere Pro (por Auron).",
     category: "Producción de Video",
     subcategory: "Recursos",
-    official: "https://www.youtube.com",
+    official: "https://youtu.be/im1VwJWp3dU",
     download: "",
     tags: ["gratis", "tutorial", "subtítulos", "premiere pro"]
   },
 
   // ── Rigs y Modelos ──
   {
-    id: "rig-estilo-mojang",
-    name: "Rig estilo Mojang",
-    desc: "Rig de personaje al estilo Mojang para animación.",
-    category: "Producción de Video",
-    subcategory: "Rigs y Modelos",
-    official: "https://www.blender.org",
-    download: "",
-    tags: ["gratis", "rig", "mojang", "animación", "minecraft"]
-  },
-  {
     id: "rig-cubo-hielo",
     name: "Rig Cubo de Hielo",
     desc: "Rig gratuito de un cubo de hielo para animaciones.",
     category: "Producción de Video",
     subcategory: "Rigs y Modelos",
-    official: "https://www.blender.org",
+    official: "https://ice-cube-rig.carrd.co/",
     download: "",
     tags: ["gratis", "rig", "animación", "blender"]
+  },
+  {
+    id: "rig-estilo-mojang",
+    name: "Rig estilo Mojang",
+    desc: "Rig de personaje al estilo Mojang para animación.",
+    category: "Producción de Video",
+    subcategory: "Rigs y Modelos",
+    official: "https://azagwen.gumroad.com/l/skEOo",
+    download: "",
+    tags: ["gratis", "rig", "mojang", "animación", "minecraft"]
   },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -506,14 +442,14 @@ export const RESOURCES = [
   // 📺 STREAMING EN VIVO
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   {
-    id: "streamlabs",
-    name: "StreamLabs",
-    desc: "Plataforma todo-en-uno para streaming con alertas, overlays y donaciones.",
+    id: "casterlabs",
+    name: "Casterlabs",
+    desc: "Suite avanzada para streamers con análisis, overlays y más.",
     category: "Streaming en Vivo",
     subcategory: "",
-    official: "https://streamlabs.com",
-    download: "https://streamlabs.com",
-    tags: ["gratis", "premium", "alertas", "overlays"]
+    official: "https://casterlabs.co",
+    download: "",
+    tags: ["gratis", "premium", "análisis", "overlays"]
   },
   {
     id: "streamelements",
@@ -526,14 +462,14 @@ export const RESOURCES = [
     tags: ["gratis", "alertas", "comunidad", "bots"]
   },
   {
-    id: "casterlabs",
-    name: "Casterlabs",
-    desc: "Suite avanzada para streamers con análisis, overlays y más.",
+    id: "streamlabs",
+    name: "StreamLabs",
+    desc: "Plataforma todo-en-uno para streaming con alertas, overlays y donaciones.",
     category: "Streaming en Vivo",
     subcategory: "",
-    official: "https://casterlabs.co",
-    download: "",
-    tags: ["gratis", "premium", "análisis", "overlays"]
+    official: "https://streamlabs.com",
+    download: "https://streamlabs.com",
+    tags: ["gratis", "premium", "alertas", "overlays"]
   },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -550,16 +486,6 @@ export const RESOURCES = [
     tags: ["gratis", "seo", "etiquetas", "youtube"]
   },
   {
-    id: "yout",
-    name: "Yout",
-    desc: "Descarga miniaturas de videos de YouTube fácilmente.",
-    category: "Herramientas YouTube",
-    subcategory: "",
-    official: "https://yout.com",
-    download: "",
-    tags: ["gratis", "miniaturas", "descargas", "youtube"]
-  },
-  {
     id: "tubebuddy",
     name: "TubeBuddy",
     desc: "Extensión y web para optimizar la gestión y crecimiento de tu canal.",
@@ -569,22 +495,22 @@ export const RESOURCES = [
     download: "",
     tags: ["gratis", "premium", "seo", "gestión", "extensión"]
   },
+  {
+    id: "yout",
+    name: "Yout",
+    desc: "Descarga miniaturas de videos de YouTube fácilmente.",
+    category: "Herramientas YouTube",
+    subcategory: "",
+    official: "https://yout.com",
+    download: "",
+    tags: ["gratis", "miniaturas", "descargas", "youtube"]
+  },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 💻 UTILIDADES DIGITALES
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   // ── Herramientas Online ──
-  {
-    id: "rekonise",
-    name: "Rekonise",
-    desc: "Acortador de URLs con estadísticas y personalización.",
-    category: "Utilidades Digitales",
-    subcategory: "Herramientas Online",
-    official: "https://rekonise.com",
-    download: "",
-    tags: ["gratis", "urls", "acortador", "estadísticas"]
-  },
   {
     id: "cobalt",
     name: "Cobalt",
@@ -625,17 +551,27 @@ export const RESOURCES = [
     download: "",
     tags: ["gratis", "qr", "códigos", "personalización"]
   },
+  {
+    id: "rekonise",
+    name: "Rekonise",
+    desc: "Acortador de URLs con estadísticas y personalización.",
+    category: "Utilidades Digitales",
+    subcategory: "Herramientas Online",
+    official: "https://rekonise.com",
+    download: "",
+    tags: ["gratis", "urls", "acortador", "estadísticas"]
+  },
 
   // ── Software PC ──
   {
-    id: "winutil",
-    name: "WinUtil",
-    desc: "Script de utilidades para optimizar y configurar Windows.",
+    id: "massgrave",
+    name: "MassGrave",
+    desc: "Herramientas para activar Microsoft Office y Windows (uso bajo tu responsabilidad).",
     category: "Utilidades Digitales",
     subcategory: "Software PC",
-    official: "https://github.com/ChrisTitusTech/winutil",
+    official: "https://massgrave.dev",
     download: "",
-    tags: ["gratis", "open-source", "windows", "optimización"]
+    tags: ["gratis", "activación", "windows", "office"]
   },
   {
     id: "ninite",
@@ -658,14 +594,14 @@ export const RESOURCES = [
     tags: ["gratis", "editor", "código", "microsoft"]
   },
   {
-    id: "massgrave",
-    name: "MassGrave",
-    desc: "Herramientas para activar Microsoft Office y Windows (uso bajo tu responsabilidad).",
+    id: "winutil",
+    name: "WinUtil",
+    desc: "Script de utilidades para optimizar y configurar Windows.",
     category: "Utilidades Digitales",
     subcategory: "Software PC",
-    official: "https://massgrave.dev",
+    official: "https://github.com/ChrisTitusTech/winutil",
     download: "",
-    tags: ["gratis", "activación", "windows", "office"]
+    tags: ["gratis", "open-source", "windows", "optimización"]
   },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -673,86 +609,6 @@ export const RESOURCES = [
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   // ── Utilidades ──
-  {
-    id: "mctitles",
-    name: "MCTitles",
-    desc: "Generador de títulos animados al estilo Minecraft.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://mctitles.com",
-    download: "",
-    tags: ["gratis", "títulos", "generador"]
-  },
-  {
-    id: "chunkbase",
-    name: "ChunkBase",
-    desc: "Localizador de biomas, estructuras y semillas en Minecraft.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://www.chunkbase.com",
-    download: "",
-    tags: ["gratis", "biomas", "semillas", "mapas"]
-  },
-  {
-    id: "minecraft-tools",
-    name: "Minecraft Tools",
-    desc: "Variedad de herramientas online: calculadoras, generadores y más.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://minecraft.tools",
-    download: "",
-    tags: ["gratis", "herramientas", "generadores"]
-  },
-  {
-    id: "crafting-grid",
-    name: "Crafting Grid",
-    desc: "Simulador de cuadrícula de crafteo para diseñar recetas.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://craftinggrid.com",
-    download: "",
-    tags: ["gratis", "crafteo", "recetas", "simulador"]
-  },
-  {
-    id: "spritecraft",
-    name: "SpriteCraft",
-    desc: "Convierte imágenes en mapas de Minecraft.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://spritecraft.net",
-    download: "https://spritecraft.net",
-    tags: ["gratis", "imágenes", "mapas", "pixel art"]
-  },
-  {
-    id: "chunker",
-    name: "Chunker",
-    desc: "Conversor de mundos entre versiones y plataformas de Minecraft.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://chunker.app",
-    download: "",
-    tags: ["gratis", "conversor", "mundos", "bedrock", "java"]
-  },
-  {
-    id: "mca-selector",
-    name: "McaSelector",
-    desc: "Editor de regiones para eliminar o exportar áreas específicas del mundo.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://github.com/Querz/mcaselector",
-    download: "https://github.com/Querz/mcaselector/releases",
-    tags: ["gratis", "open-source", "regiones", "editor"]
-  },
-  {
-    id: "misode-datapack",
-    name: "Misode Datapack Generator",
-    desc: "Generador visual de datapacks y estructuras JSON.",
-    category: "Minecraft",
-    subcategory: "Utilidades",
-    official: "https://misode.github.io",
-    download: "",
-    tags: ["gratis", "datapacks", "json", "generador"]
-  },
   {
     id: "birdflop-resources",
     name: "Birdflop Resources",
@@ -773,6 +629,86 @@ export const RESOURCES = [
     download: "",
     tags: ["gratis", "rgb", "colores", "generador"]
   },
+  {
+    id: "chunkbase",
+    name: "ChunkBase",
+    desc: "Localizador de biomas, estructuras y semillas en Minecraft.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://www.chunkbase.com",
+    download: "",
+    tags: ["gratis", "biomas", "semillas", "mapas"]
+  },
+  {
+    id: "chunker",
+    name: "Chunker",
+    desc: "Conversor de mundos entre versiones y plataformas de Minecraft.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://oss.chunker.app/",
+    download: "",
+    tags: ["gratis", "conversor", "mundos", "bedrock", "java"]
+  },
+  {
+    id: "crafting-grid",
+    name: "Crafting Grid",
+    desc: "Simulador de cuadrícula de crafteo para diseñar recetas.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://crafting.thedestruc7i0n.ca/",
+    download: "",
+    tags: ["gratis", "crafteo", "recetas", "simulador"]
+  },
+  {
+    id: "mca-selector",
+    name: "McaSelector",
+    desc: "Editor de regiones para eliminar o exportar áreas específicas del mundo.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://github.com/Querz/mcaselector",
+    download: "https://github.com/Querz/mcaselector/releases",
+    tags: ["gratis", "open-source", "regiones", "editor"]
+  },
+  {
+    id: "mctitles",
+    name: "MCTitles",
+    desc: "Generador de títulos animados al estilo Minecraft.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://mctitles.com",
+    download: "",
+    tags: ["gratis", "títulos", "generador"]
+  },
+  {
+    id: "minecraft-tools",
+    name: "Minecraft Tools",
+    desc: "Variedad de herramientas online: calculadoras, generadores y más.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://minecraft.tools",
+    download: "",
+    tags: ["gratis", "herramientas", "generadores"]
+  },
+  {
+    id: "misode-datapack",
+    name: "Misode Datapack Generator",
+    desc: "Generador visual de datapacks y estructuras JSON.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://misode.github.io",
+    download: "",
+    tags: ["gratis", "datapacks", "json", "generador"]
+  },
+  {
+    id: "spritecraft",
+    name: "SpriteCraft",
+    desc: "Convierte imágenes en mapas de Minecraft.",
+    category: "Minecraft",
+    subcategory: "Utilidades",
+    official: "https://autosaved.org/spritecraft",
+    download: "https://autosaved.org/spritecraft",
+    tags: ["gratis", "imágenes", "mapas", "pixel art"]
+  },
 
   // ── Personalización ──
   {
@@ -786,14 +722,14 @@ export const RESOURCES = [
     tags: ["gratis", "open-source", "3d", "modelado"]
   },
   {
-    id: "skinmc",
-    name: "SkinMC",
-    desc: "Editor y visor de skins de Minecraft con opciones de descarga.",
+    id: "mcicons",
+    name: "MCIcons",
+    desc: "Iconos de objetos y bloques de Minecraft en formato PNG.",
     category: "Minecraft",
     subcategory: "Personalización",
-    official: "https://skinmc.net",
+    official: "https://mcicons.ccleaf.com/",
     download: "",
-    tags: ["gratis", "skins", "editor", "visor"]
+    tags: ["gratis", "iconos", "bloques", "png"]
   },
   {
     id: "mcprep",
@@ -804,26 +740,6 @@ export const RESOURCES = [
     official: "https://theduckcow.com/dev/blender/mcprep/",
     download: "",
     tags: ["gratis", "open-source", "blender", "modelos"]
-  },
-  {
-    id: "totems",
-    name: "Totems",
-    desc: "Personaliza tótems de la inmortalidad con diseños únicos.",
-    category: "Minecraft",
-    subcategory: "Personalización",
-    official: "https://totems.vercel.app",
-    download: "",
-    tags: ["gratis", "tótems", "personalización"]
-  },
-  {
-    id: "texture-packs",
-    name: "Texture-Packs.com",
-    desc: "Descarga packs de texturas para Minecraft Java y Bedrock.",
-    category: "Minecraft",
-    subcategory: "Personalización",
-    official: "https://texture-packs.com",
-    download: "",
-    tags: ["gratis", "texturas", "resource packs", "java", "bedrock"]
   },
   {
     id: "minecraft-capes",
@@ -846,27 +762,37 @@ export const RESOURCES = [
     tags: ["gratis", "pvp", "texturas", "resource pack"]
   },
   {
-    id: "mcicons",
-    name: "MCIcons",
-    desc: "Iconos de objetos y bloques de Minecraft en formato PNG.",
+    id: "skinmc",
+    name: "SkinMC",
+    desc: "Editor y visor de skins de Minecraft con opciones de descarga.",
     category: "Minecraft",
     subcategory: "Personalización",
-    official: "https://mcicons.net",
+    official: "https://skinmc.net",
     download: "",
-    tags: ["gratis", "iconos", "bloques", "png"]
+    tags: ["gratis", "skins", "editor", "visor"]
+  },
+  {
+    id: "texture-packs",
+    name: "Texture-Packs.com",
+    desc: "Descarga packs de texturas para Minecraft Java y Bedrock.",
+    category: "Minecraft",
+    subcategory: "Personalización",
+    official: "https://texture-packs.com",
+    download: "",
+    tags: ["gratis", "texturas", "resource packs", "java", "bedrock"]
+  },
+  {
+    id: "totems",
+    name: "Totems",
+    desc: "Personaliza tótems de la inmortalidad con diseños únicos.",
+    category: "Minecraft",
+    subcategory: "Personalización",
+    official: "https://totems.me/",
+    download: "",
+    tags: ["gratis", "tótems", "personalización"]
   },
 
   // ── Modding ──
-  {
-    id: "modrinth",
-    name: "Modrinth",
-    desc: "Plataforma de mods moderna, rápida y de código abierto.",
-    category: "Minecraft",
-    subcategory: "Modding",
-    official: "https://modrinth.com",
-    download: "",
-    tags: ["gratis", "open-source", "mods", "modpacks"]
-  },
   {
     id: "curseforge",
     name: "CurseForge",
@@ -878,14 +804,24 @@ export const RESOURCES = [
     tags: ["gratis", "mods", "modpacks"]
   },
   {
-    id: "vanilla-tweaks",
-    name: "Vanilla Tweaks",
-    desc: "Mejoras visuales y de calidad de vida sin modificar la jugabilidad.",
+    id: "mcpedl",
+    name: "MCPEDL",
+    desc: "Recursos, mods y mapas para Minecraft Bedrock Edition.",
     category: "Minecraft",
     subcategory: "Modding",
-    official: "https://vanillatweaks.net",
+    official: "https://mcpedl.com",
     download: "",
-    tags: ["gratis", "vanilla", "mejoras", "qol"]
+    tags: ["gratis", "bedrock", "mods", "mapas"]
+  },
+  {
+    id: "modrinth",
+    name: "Modrinth",
+    desc: "Plataforma de mods moderna, rápida y de código abierto.",
+    category: "Minecraft",
+    subcategory: "Modding",
+    official: "https://modrinth.com",
+    download: "",
+    tags: ["gratis", "open-source", "mods", "modpacks"]
   },
   {
     id: "optifine",
@@ -903,22 +839,32 @@ export const RESOURCES = [
     desc: "Añade física realista a bloques y entidades (Patreon).",
     category: "Minecraft",
     subcategory: "Modding",
-    official: "https://www.patreon.com/physicsmod",
+    official: "https://www.patreon.com/Haubna",
     download: "",
     tags: ["premium", "física", "realismo"]
   },
   {
-    id: "mcpedl",
-    name: "MCPEDL",
-    desc: "Recursos, mods y mapas para Minecraft Bedrock Edition.",
+    id: "vanilla-tweaks",
+    name: "Vanilla Tweaks",
+    desc: "Mejoras visuales y de calidad de vida sin modificar la jugabilidad.",
     category: "Minecraft",
     subcategory: "Modding",
-    official: "https://mcpedl.com",
+    official: "https://vanillatweaks.net",
     download: "",
-    tags: ["gratis", "bedrock", "mods", "mapas"]
+    tags: ["gratis", "vanilla", "mejoras", "qol"]
   },
 
   // ── Clientes ──
+  {
+    id: "feather-client",
+    name: "Feather Client",
+    desc: "Cliente ligero y rápido con soporte para mods y cosméticos.",
+    category: "Minecraft",
+    subcategory: "Clientes",
+    official: "https://feathermc.com",
+    download: "https://feathermc.com",
+    tags: ["gratis", "ligero", "mods", "cosméticos"]
+  },
   {
     id: "labymod",
     name: "Labymod",
@@ -939,28 +885,8 @@ export const RESOURCES = [
     download: "https://www.lunarclient.com/download",
     tags: ["gratis", "pvp", "mods", "optimizado"]
   },
-  {
-    id: "feather-client",
-    name: "Feather Client",
-    desc: "Cliente ligero y rápido con soporte para mods y cosméticos.",
-    category: "Minecraft",
-    subcategory: "Clientes",
-    official: "https://feathermc.com",
-    download: "https://feathermc.com",
-    tags: ["gratis", "ligero", "mods", "cosméticos"]
-  },
 
   // ── Launchers ──
-  {
-    id: "bedrock-launcher",
-    name: "Bedrock Launcher",
-    desc: "Lanzador para versiones antiguas de Minecraft Bedrock en Windows 10.",
-    category: "Minecraft",
-    subcategory: "Launchers",
-    official: "https://bedrocklauncher.github.io",
-    download: "https://bedrocklauncher.github.io",
-    tags: ["gratis", "bedrock", "launcher", "windows"]
-  },
   {
     id: "modrinth-app",
     name: "Modrinth App",
@@ -984,22 +910,12 @@ export const RESOURCES = [
 
   // ── Comunidad ──
   {
-    id: "planetminecraft",
-    name: "PlanetMinecraft",
-    desc: "Comunidad para compartir mapas, skins, texturas y proyectos.",
-    category: "Minecraft",
-    subcategory: "Comunidad",
-    official: "https://www.planetminecraft.com",
-    download: "",
-    tags: ["gratis", "comunidad", "mapas", "skins"]
-  },
-  {
     id: "minecraft-net",
     name: "Minecraft.net",
     desc: "Sitio oficial de Minecraft, noticias y descargas.",
     category: "Minecraft",
     subcategory: "Comunidad",
-    official: "https://www.minecraft.net",
+    official: "https://www.minecraft.net/es-es",
     download: "",
     tags: ["oficial", "noticias", "descargas"]
   },
@@ -1009,49 +925,102 @@ export const RESOURCES = [
     desc: "Plataforma para encontrar y compartir memes de Minecraft.",
     category: "Minecraft",
     subcategory: "Comunidad",
-    official: "https://minemev.com",
+    official: "http://minemev.com/",
     download: "",
     tags: ["gratis", "memes", "comunidad", "diversión"]
   },
+  {
+    id: "planetminecraft",
+    name: "PlanetMinecraft",
+    desc: "Comunidad para compartir mapas, skins, texturas y proyectos.",
+    category: "Minecraft",
+    subcategory: "Comunidad",
+    official: "https://www.planetminecraft.com",
+    download: "",
+    tags: ["gratis", "comunidad", "mapas", "skins"]
+  },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // 📝 GENERACIÓN DE CONTENIDO
+  // 🧠 INTELIGENCIA ARTIFICIAL
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  // ── Plantilla Discord ──
   {
-    id: "plantilla-discord-servidor",
-    name: "Plantilla Servidor Discord",
-    desc: "Prompt para crear una plantilla de invitación a un servidor de Discord sobre Minecraft (TheDigital Galaxy). Máximo 2000 caracteres, con emojis y categorías.",
-    category: "Generación de Contenido",
-    subcategory: "Plantilla Discord",
-    official: "",
+    id: "chatgpt",
+    name: "ChatGPT",
+    desc: "Asistente conversacional de OpenAI, ideal para generar texto, ideas y resolver dudas.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://chat.openai.com",
     download: "",
-    tags: ["prompt", "discord", "servidor", "plantilla", "tutodigital"]
+    tags: ["gratis", "premium", "chatbot", "texto", "openai"]
   },
-
-  // ── Títulos y Descripciones para YouTube ──
   {
-    id: "prompt-titulos-youtube",
-    name: "Títulos para Videos de Minecraft",
-    desc: "Prompt para ChatGPT que genera etiquetas SEO, mejora títulos, reescribe descripciones y crea comentarios anclados para videos largos de Minecraft.",
-    category: "Generación de Contenido",
-    subcategory: "Títulos y Descripciones para YouTube",
-    official: "",
+    id: "claude",
+    name: "Claude",
+    desc: "Asistente de IA de Anthropic, enfocado en conversaciones seguras y útiles.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://claude.ai",
     download: "",
-    tags: ["prompt", "youtube", "seo", "títulos", "minecraft", "tutodigital"]
+    tags: ["gratis", "premium", "chatbot", "anthropic"]
   },
-
-  // ── StoryTelling ──
   {
-    id: "estructura-storytelling",
-    name: "StoryTelling",
-    desc: "Estructura para contar historias: Intro, Contexto, Objetivo, Propósito, Castigo, Pasos y Valor. Ideal para narrar experiencias en Minecraft o cualquier otro tema.",
-    category: "Generación de Contenido",
-    subcategory: "StoryTelling",
-    official: "",
+    id: "deepseek",
+    name: "DeepSeek",
+    desc: "Modelo de lenguaje gratuito con capacidades de razonamiento y búsqueda en internet.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://www.deepseek.com",
     download: "",
-    tags: ["plantilla", "storytelling", "narrativa", "estructura", "youtube"]
+    tags: ["gratis", "razonamiento", "búsqueda", "open-source"]
   },
+  {
+    id: "gemini",
+    name: "Gemini",
+    desc: "Modelo multimodal de Google, capaz de entender texto, imágenes y más.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://gemini.google.com",
+    download: "",
+    tags: ["gratis", "multimodal", "google"]
+  },
+  {
+    id: "grok",
+    name: "Grok",
+    desc: "IA integrada en X (antes Twitter) con acceso a información en tiempo real.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://grok.x.ai",
+    download: "",
+    tags: ["gratis", "premium", "tiempo real", "x", "twitter"]
+  },
+  {
+    id: "lm-studio",
+    name: "LM Studio",
+    desc: "Ejecuta modelos de lenguaje localmente en tu ordenador, sin conexión.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://lmstudio.ai",
+    download: "https://lmstudio.ai",
+    tags: ["gratis", "local", "modelos", "offline"]
+  },
+  {
+    id: "perplexity",
+    name: "Perplexity",
+    desc: "Buscador IA conversacional que responde con fuentes y citas.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://www.perplexity.ai",
+    download: "",
+    tags: ["gratis", "premium", "búsqueda", "fuentes"]
+  },
+  {
+    id: "whimsical",
+    name: "Whimsical",
+    desc: "Crea diagramas, mapas mentales y flujos de trabajo con ayuda de inteligencia artificial.",
+    category: "Inteligencia Artificial",
+    subcategory: "",
+    official: "https://whimsical.com",
+    download: "",
+    tags: ["gratis", "premium", "diagramas", "mapas mentales", "productividad"]
+  }
 ];
-
