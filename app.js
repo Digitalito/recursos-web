@@ -14,6 +14,7 @@ import {
   renderResultCount,
   renderNoResults,
   renderModal,
+  renderFeaturedSection,
 } from "./modules/renderer.js";
 import {
   initScrollReveal,
@@ -36,6 +37,7 @@ const searchInput = $("#search-input");
 const resultCountEl = $("#result-count");
 const categoryTabsEl = $("#category-tabs");
 const subcategoryChipsEl = $("#subcategory-chips");
+const featuredSectionEl = $("#featured-section");
 const resourceGridEl = $("#resource-grid");
 const noResultsEl = $("#no-results");
 const modalOverlay = $("#modal-overlay");
@@ -53,6 +55,8 @@ setState("filtered", RESOURCES);
  */
 function updateView() {
   const oldPositions = capturePositions(resourceGridEl);
+  // Also capture featured if visible
+  const oldFeaturedPositions = capturePositions(featuredSectionEl);
 
   const filtered = filterResources(state.allResources, {
     category: state.category,
@@ -61,15 +65,40 @@ function updateView() {
     tags: state.activeTags,
   });
 
+  const isDefaultView = (state.category === "all" || !state.category) && 
+                        (state.subcategory === "all" || !state.subcategory) && 
+                        (!state.searchQuery || state.searchQuery.trim() === "") &&
+                        (!state.activeTags || state.activeTags.length === 0);
+
+  let featuredItems = [];
+  let regularItems = filtered;
+
+  if (isDefaultView) {
+    // Extract up to 4 featured
+    featuredItems = filtered.filter(r => r.featured).slice(0, 4);
+    const featuredIds = new Set(featuredItems.map(r => r.id));
+    regularItems = filtered.filter(r => !featuredIds.has(r.id));
+  } else {
+    // In filtered view, featured items stay in the main grid
+    featuredSectionEl.style.display = "none";
+    featuredSectionEl.innerHTML = "";
+  }
+
   state.filtered = filtered;
 
-  // Render cards
-  const newCards = renderCards(resourceGridEl, filtered);
+  // Render featured section if any
+  const newFeaturedCards = renderFeaturedSection(featuredSectionEl, featuredItems);
+  
+  // Render main cards
+  const newCards = renderCards(resourceGridEl, regularItems, isDefaultView);
 
   // Animate
   flipAnimate(resourceGridEl, oldPositions);
-  if (newCards.length > 0) {
-    observeCards(newCards);
+  if (featuredItems.length > 0) flipAnimate(featuredSectionEl, oldFeaturedPositions);
+
+  const allNewCards = [...newFeaturedCards, ...newCards];
+  if (allNewCards.length > 0) {
+    observeCards(allNewCards);
   }
 
   // Result count
@@ -79,7 +108,7 @@ function updateView() {
   renderNoResults(noResultsEl, filtered.length === 0, state.searchQuery);
 
   // Show/hide grid
-  resourceGridEl.style.display = filtered.length > 0 ? "grid" : "none";
+  resourceGridEl.style.display = regularItems.length > 0 ? "grid" : "none";
 }
 
 // ── Category Tab Handling ─────────────────────────────────
@@ -181,8 +210,26 @@ resourceGridEl.addEventListener("click", (e) => {
   if (resource) openModal(resource);
 });
 
+featuredSectionEl.addEventListener("click", (e) => {
+  const card = e.target.closest(".resource-card");
+  if (!card) return;
+  if (e.target.closest("a")) return;
+
+  const resource = state.allResources.find((r) => r.id === card.dataset.id);
+  if (resource) openModal(resource);
+});
+
 // Keyboard support for cards
 resourceGridEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const card = e.target.closest(".resource-card");
+    if (!card) return;
+    const resource = state.allResources.find((r) => r.id === card.dataset.id);
+    if (resource) openModal(resource);
+  }
+});
+
+featuredSectionEl.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const card = e.target.closest(".resource-card");
     if (!card) return;
@@ -201,12 +248,8 @@ function boot() {
   const categories = getCategories(state.allResources);
   renderCategoryTabs(categoryTabsEl, categories, "all", handleCategoryChange);
 
-  // 3. Render initial cards
-  const newCards = renderCards(resourceGridEl, state.allResources);
-  observeCards(newCards);
-
-  // 4. Render result count
-  renderResultCount(resultCountEl, state.allResources.length, state.allResources.length);
+  // 3. Render initial state (this will call updateView indirectly or we can call it)
+  updateView();
 
   // 5. Animate hero
   animateHero(heroEl);

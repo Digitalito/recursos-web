@@ -1,29 +1,91 @@
-// ============================================================
-// renderer.js — All DOM creation and manipulation
-// ============================================================
-// Uses DocumentFragment for batch rendering.
 // Diff-based card updates: only add/remove what changed.
 // ============================================================
+// SVG Platform Icons Mapping
+const PLATFORM_ICONS = {
+  web: '<i class="fa-solid fa-globe"></i>',
+  windows: '<i class="fa-brands fa-windows"></i>',
+  mac: '<i class="fa-brands fa-apple"></i>',
+  ios: '<i class="fa-brands fa-apple"></i>',
+  linux: '<i class="fa-brands fa-linux"></i>',
+  android: '<i class="fa-brands fa-android"></i>',
+  github: '<i class="fa-brands fa-github"></i>',
+};
+
+// Fallback placeholder (Generic Globe SVG)
+const PLACEHOLDER_ICON = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:%236b7280"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>')}`;
+
+/**
+ * Extract domain from URL.
+ * @param {string} url
+ * @returns {string}
+ */
+function getDomain(url) {
+  if (!url) return "";
+  try {
+    const domain = new URL(url).hostname;
+    return domain.replace(/^www\./, "");
+  } catch (e) {
+    return "";
+  }
+}
+
+/**
+ * Get favicon URL for a domain.
+ * @param {string} domain
+ * @returns {string}
+ */
+function getFaviconUrl(domain) {
+  if (!domain) return PLACEHOLDER_ICON;
+  return `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+}
+
+/**
+ * Generate platform icons HTML.
+ * @param {string[]} platforms
+ * @returns {string}
+ */
+function getPlatformIconsHTML(platforms) {
+  if (!platforms || platforms.length === 0 || (platforms.length === 1 && platforms[0].toLowerCase() === "web")) {
+    return '<span class="platform-item" title="web"><i class="fa-solid fa-globe"></i></span>';
+  }
+
+  return platforms
+    .map(p => {
+      const icon = PLATFORM_ICONS[p.toLowerCase()];
+      return icon ? `<span class="platform-item" title="${p}">${icon}</span>` : "";
+    })
+    .join("");
+}
 
 // ── Card Rendering ─────────────────────────────────────────
 
 /**
  * Build a single resource card element.
  * @param {Object} resource
+ * @param {boolean} showFeatured - Whether to show the featured styling/badge
  * @returns {HTMLElement}
  */
-function createCard(resource) {
+function createCard(resource, showFeatured = false) {
   const card = document.createElement("article");
-  card.className = "resource-card card-hidden";
+  const isFeatured = !!resource.featured && showFeatured;
+  card.className = `resource-card card-hidden ${isFeatured ? "featured" : ""}`;
   card.dataset.id = resource.id;
   card.setAttribute("tabindex", "0");
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Ver detalles de ${resource.name}`);
 
+  // Favicon logic
+  const targetUrl = resource.official || resource.download;
+  const domain = getDomain(targetUrl);
+  const faviconUrl = getFaviconUrl(domain);
+
   // Subcategory badge
   const badge = resource.subcategory
     ? `<span class="card-badge">${resource.subcategory}</span>`
     : "";
+
+  // Platforms
+  const platformsHTML = getPlatformIconsHTML(resource.platforms || ["web"]);
 
   // Tags
   const tagsHTML = resource.tags
@@ -36,11 +98,17 @@ function createCard(resource) {
   const btnHref = resource.download || resource.official;
 
   card.innerHTML = `
+    ${isFeatured ? '<span class="featured-badge">Destacado</span>' : ""}
     <div class="card-header">
+      <div class="card-favicon-container">
+        <img src="${faviconUrl}" alt="" class="card-favicon" loading="lazy" 
+             onerror="this.src='${PLACEHOLDER_ICON}'">
+      </div>
       <h3 class="card-title">${resource.name}</h3>
       ${badge}
     </div>
     <p class="card-desc">${resource.desc}</p>
+    <div class="platforms">${platformsHTML}</div>
     <div class="card-footer">
       <div class="card-tags">${tagsHTML}</div>
       <a href="${btnHref}" target="_blank" rel="noopener noreferrer"
@@ -65,9 +133,10 @@ function createCard(resource) {
  * Uses diff-based approach: reuses existing cards, adds new, removes stale.
  * @param {HTMLElement} container
  * @param {Array} resources
+ * @param {boolean} showFeatured - Whether to apply featured styling
  * @returns {HTMLElement[]} Array of new card elements (for animation)
  */
-export function renderCards(container, resources) {
+export function renderCards(container, resources, showFeatured = false) {
   const existingCards = new Map();
   container.querySelectorAll(".resource-card").forEach((card) => {
     existingCards.set(card.dataset.id, card);
@@ -87,9 +156,22 @@ export function renderCards(container, resources) {
   const fragment = document.createDocumentFragment();
   resources.forEach((resource) => {
     if (existingCards.has(resource.id)) {
-      fragment.appendChild(existingCards.get(resource.id));
+      // If the card already exists, we might need to update its featured state
+      const card = existingCards.get(resource.id);
+      const isCurrentlyFeatured = card.classList.contains("featured");
+      const shouldBeFeatured = !!resource.featured && showFeatured;
+      
+      if (isCurrentlyFeatured !== shouldBeFeatured) {
+        // Simple re-render of this card if featured state changed
+        const newCard = createCard(resource, showFeatured);
+        card.replaceWith(newCard);
+        newCards.push(newCard);
+        fragment.appendChild(newCard);
+      } else {
+        fragment.appendChild(card);
+      }
     } else {
-      const card = createCard(resource);
+      const card = createCard(resource, showFeatured);
       newCards.push(card);
       fragment.appendChild(card);
     }
@@ -97,6 +179,24 @@ export function renderCards(container, resources) {
 
   container.appendChild(fragment);
   return newCards;
+}
+
+/**
+ * Render featured items in the featured section.
+ * @param {HTMLElement} container
+ * @param {Array} resources - Max 4 featured items
+ * @returns {HTMLElement[]}
+ */
+export function renderFeaturedSection(container, resources) {
+  if (resources.length === 0) {
+    container.style.display = "none";
+    container.innerHTML = "";
+    return [];
+  }
+
+  container.style.display = "grid";
+  // Featured section always shows featured cards as featured
+  return renderCards(container, resources, true);
 }
 
 // ── Category Tabs ──────────────────────────────────────────
