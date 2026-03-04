@@ -1290,7 +1290,7 @@ export const RESOURCES = [
     official: "https://modrinth.com/modpack/cc-modpack",
     download: "",
     tags: ["gratis", "minecraft", "modpack", "creadores de contenido", "mods", "cc"],
-    featured: false,
+    featured: true,
     platforms: ["web"]
   },
   {
@@ -1302,7 +1302,7 @@ export const RESOURCES = [
     official: "https://modrinth.com/modpack/fabulously-optimized",
     download: "",
     tags: ["gratis", "minecraft", "modpack", "optimización", "rendimiento", "shaders"],
-    featured: false,
+    featured: true,
     platforms: ["windows", "mac", "linux"]
   },
   {
@@ -1546,7 +1546,7 @@ export const RESOURCES = [
     official: "https://ko-fi.com/s/bfd5e4ad5f",
     download: "",
     tags: ["gratis", "guía", "pdf", "youtube", "twitter", "crecimiento", "contenido"],
-    featured: false,
+    featured: true,
     platforms: ["web"]
   },
 
