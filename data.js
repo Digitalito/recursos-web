@@ -627,22 +627,22 @@ export const RESOURCES = [
     featured: false,
     platforms: ["windows", "mac", "linux"]
   },
-  {
-    id: "speechchat",
-    name: "SpeechChat",
-    desc: "Herramienta que lee en voz alta los mensajes del chat de plataformas como Twitch o YouTube en tiempo real.",
-    category: "Audio & Grabación",
-    subcategory: "",
-    official: "https://speechchat.com",
-    download: "",
-    tags: ["gratis", "voz", "chat", "lector", "tiempo real", "accesibilidad"],
-    featured: false,
-    platforms: ["web"]
-  },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 📺 STREAMING EN VIVO
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  {
+    id: "aitum-stream-suite",
+    name: "Aitum Stream Suite",
+    desc: "Suite de plugins para OBS Studio que permite instalar fácilmente plugins populares y añadir funcionalidades como multistream (transmisión simultánea a múltiples plataformas).",
+    category: "Streaming en Vivo",
+    subcategory: "",
+    official: "https://aitum.tv/products/stream-suite",
+    download: "",
+    tags: ["freemium", "obs", "plugins", "multistream", "streaming", "software"],
+    featured: false,
+    platforms: ["windows", "mac"]
+  },
   {
     id: "casterlabs",
     name: "Casterlabs",
@@ -651,7 +651,7 @@ export const RESOURCES = [
     subcategory: "",
     official: "https://casterlabs.co",
     download: "",
-    tags: ["freemium", "análisis", "overlays", "streaming"],
+    tags: ["gratis", "análisis", "overlays", "streaming"],
     featured: false,
     platforms: ["web"]
   },
@@ -681,7 +681,7 @@ export const RESOURCES = [
   },
   {
     id: "streamlabs-obs",
-    name: "StreamLabs Desktop (SLOBS)",
+    name: "StreamLabs Desktop (OBS)",
     desc: "Versión personalizada de OBS con integración nativa de alertas, overlays y widgets de StreamLabs.",
     category: "Streaming en Vivo",
     subcategory: "",
@@ -691,18 +691,17 @@ export const RESOURCES = [
     featured: false,
     platforms: ["windows", "mac"]
   },
-  // NUEVO: Aitum Stream Suite
   {
-    id: "aitum-stream-suite",
-    name: "Aitum Stream Suite",
-    desc: "Suite de plugins para OBS Studio que permite instalar fácilmente plugins populares y añadir funcionalidades como multistream (transmisión simultánea a múltiples plataformas).",
+    id: "speechchat",
+    name: "SpeechChat",
+    desc: "Herramienta que lee en voz alta los mensajes del chat de plataformas como Twitch o YouTube en tiempo real.",
     category: "Streaming en Vivo",
     subcategory: "",
-    official: "https://aitum.tv/products/stream-suite",
+    official: "https://speechchat.com",
     download: "",
-    tags: ["freemium", "obs", "plugins", "multistream", "streaming", "software"],
+    tags: ["gratis", "voz", "chat", "lector", "tiempo real", "accesibilidad"],
     featured: false,
-    platforms: ["windows", "mac"]
+    platforms: ["web"]
   },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
